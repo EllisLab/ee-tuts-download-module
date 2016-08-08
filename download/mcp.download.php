@@ -59,7 +59,7 @@ class Download_mcp {
 		$this->EE->load->library('table');
 		$this->EE->load->helper('form');
 		
-		$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('download_module_name'));
+		$this->EE->view->cp_page_title =  lang('download_module_name');
 
 		$vars['action_url'] = 'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download'.AMP.'method=edit_downloads';
 		$vars['form_hidden'] = NULL;
@@ -182,8 +182,9 @@ class Download_mcp {
 		$this->EE->load->library('table');
 		$this->EE->load->library('encrypt');
 		$this->EE->load->model('tools_model');
-
-		$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('add_files'));
+		
+		$this->EE->view->cp_page_title =  lang('add_files');
+	
 		$this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download', $this->EE->lang->line('download_module_name'));
 		$vars['action_url'] = 'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download'.AMP.'method=add_downloads';		
 		
@@ -259,7 +260,7 @@ class Download_mcp {
 		$this->EE->load->helper(array('form', 'date'));
 		$this->EE->load->library('table');
 		
-		$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('add_files'));
+		$this->EE->view->cp_page_title =  lang('add_files');
 		$this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download', $this->EE->lang->line('download_module_name'));
 		
 
@@ -356,7 +357,7 @@ class Download_mcp {
 		// No files in post- check get
 		if ($this->EE->input->post('action') == 'delete')
 		{
-			$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('delete_files'));
+			$this->EE->view->cp_page_title =  lang('delete_files');
 			$this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download', $this->EE->lang->line('download_module_name'));
 
 
@@ -372,7 +373,7 @@ class Download_mcp {
 		}
 		else
 		{
-			$this->EE->cp->set_variable('cp_page_title', $this->EE->lang->line('edit_files'));
+			$this->EE->view->cp_page_title =  lang('edit_files');
 			$this->EE->cp->set_breadcrumb(BASE.AMP.'C=addons_modules'.AMP.'M=show_module_cp'.AMP.'module=download', $this->EE->lang->line('download_module_name'));
 
    			foreach ($query->result() as $row)
