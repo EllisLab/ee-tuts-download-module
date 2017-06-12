@@ -2,8 +2,8 @@
 ExpressionEngine Tutorials - Download Module
 ############################################
 
-Source files for the example module used in the ExpressionEngine
-Developer Documentation `Module Tutorial <http://expressionengine.com/user_guide/development/module_tutorial.html>`_.
+Source files for the example module used in the ExpressionEngine (version 2) 
+Developer Documentation `Module Tutorial <https://docs.expressionengine.com/v2/development/module_tutorial.html>`_.
 
 This software package is licensed under the MIT (X11) License.
 
